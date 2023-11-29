@@ -11,12 +11,12 @@ import Lib.Petugas;
  *
  * @author LAB 1 PC 16
  */
-public class MDI_Admin extends javax.swing.JFrame {
+public class MDI_Petugas extends javax.swing.JFrame {
 
     /**
-     * Creates new form FormUtama
+     * Creates new form MDI_Petugas
      */
-    public MDI_Admin() {
+    public MDI_Petugas() {
         initComponents();
         nama_petugas.setText(Petugas.getNama_petugas().toString());
     }
@@ -33,38 +33,23 @@ public class MDI_Admin extends javax.swing.JFrame {
         desktopPane = new javax.swing.JDesktopPane();
         menuBar = new javax.swing.JMenuBar();
         nama_petugas = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        nama_petugas.setText("nama petugas");
+        nama_petugas.setText("nama_petugas");
         menuBar.add(nama_petugas);
 
-        jMenu3.setText("Petugas");
-        jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu3MouseClicked(evt);
-            }
-        });
-        menuBar.add(jMenu3);
-
-        jMenu1.setText("Spp");
-        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu1MouseClicked(evt);
-            }
-        });
+        jMenu1.setText("Login");
         menuBar.add(jMenu1);
 
-        jMenu2.setText("Kelas");
-        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu2MouseClicked(evt);
-            }
-        });
+        jMenu2.setText("Transaksi");
         menuBar.add(jMenu2);
+
+        jMenu3.setText("History Pembayaran");
+        menuBar.add(jMenu3);
 
         setJMenuBar(menuBar);
 
@@ -80,29 +65,7 @@ public class MDI_Admin extends javax.swing.JFrame {
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
-        // TODO add your handling code here:
-        FromSpp spp = new FromSpp();
-        desktopPane.add(spp);
-        spp.setVisible(true);
-    }//GEN-LAST:event_jMenu1MouseClicked
-
-    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
-        // TODO add your handling code here:
-        FormKelas kelas = new FormKelas();
-        desktopPane.add(kelas);
-        kelas.setVisible(true);
-    }//GEN-LAST:event_jMenu2MouseClicked
-
-    private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
-        // TODO add your handling code here:
-        FormPetugas petugas = new FormPetugas();
-        desktopPane.add(petugas);
-        petugas.setVisible(true);
-    }//GEN-LAST:event_jMenu3MouseClicked
 
     /**
      * @param args the command line arguments
@@ -121,21 +84,20 @@ public class MDI_Admin extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MDI_Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MDI_Petugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MDI_Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MDI_Petugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MDI_Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MDI_Petugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MDI_Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MDI_Petugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MDI_Admin().setVisible(true);
+                new MDI_Petugas().setVisible(true);
             }
         });
     }
